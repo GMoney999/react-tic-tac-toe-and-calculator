@@ -1,0 +1,24 @@
+
+What were some of the challenges you encountered?
+
+I encountered some issues with sharing state between components. After re-reading the tic-tac-toe tutorial, I learned that the proper way to store the state in the parent component, which can then pass the state down
+to its children components using props.
+It took some trial and error to build the return value for the Panel component. Then I figured out you have to use 'map' twice, first for each button row, then again for each button.
+It was also a bit of a challenge to refactor the tic-tac-toe tutorial into modular components, instead of having all the components inside a single App.js file.
+
+
+Differentiate between Real DOM and Virtual DOM. List out a few differences.
+
+The real DOM is an actual Browser API, and the Virtual DOM is just a pattern used by javascript libraries like React to emulate or 'copy' the DOM. Although they are similar, there are some key differences.
+When the real DOM is changed, it can trigger a reflow and/or repaint cycle, the Virtual DOM is not encumbered by this.
+The real DOM is typically very slow while the Virtual DOM is more performance efficient. When multiple changes are made, the Virtual DOM can update in a single iteration, where the real DOM cannot do.
+When changes are made to the Virtual DOM, the library decides what is the best way to update the DOM.
+The Virtual DOM also allows programmers to code declaratively by describing the state of the UI, instead of imperatively by updating the UI manually.
+
+
+
+What are some problems that React can solve for us?
+React allows us to create components which not only make our code more modular and manageable, it makes it easier to share and update state across components. In original JavaScript, it is more difficult and redundant to reuse pieces of code.
+Reacts' component-based architecture allows us to build more scalable applications. JavaScript can be difficult to scale apps with due to its lack of structure.
+React provides a Virtual DOM which updates the DOM more efficiently. In JavaScript, updating the DOM of large applications can decrease performance.
+React updates and renders components only when necessary, which means faster performance and a smoother user experience. Frequently updating the UI and responding to events is harder to do in JavaScript than in React.
